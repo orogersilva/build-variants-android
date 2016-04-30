@@ -18,14 +18,17 @@ android {
 
         debug {
 
-            applicationIdSuffix ".debug"
-            versionNameSuffix "-debug"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-DEV"
 
             buildConfigField "String", "API_URL",
                     "\"http://debug.com/api\""
         }
 
         qa {
+
+            applicationIdSuffix ".qa"
+            versionNameSuffix "-QA"
 
             buildConfigField "String", "API_URL",
                     "\"http://qa.com/api\""
@@ -38,6 +41,17 @@ android {
 
             buildConfigField "String", "API_URL",
                     "\"http://release.com/api\""
+        }
+    }
+
+    productFlavors {
+
+        green {
+            applicationId 'com.orogersilva.buildvariants.green'
+        }
+
+        yellow {
+            applicationId 'com.orogersilva.buildvariants.yellow'
         }
     }
 }
